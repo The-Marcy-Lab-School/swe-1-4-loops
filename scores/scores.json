@@ -1,0 +1,59 @@
+{
+  "idToTestNameHash": {
+    "DeTe1": "Debug Tests brokenLoop - it logs from the start number (inclusive) to the end number (inclusive) by 1",
+    "DeTe2": "Debug Tests brokenNested - it logs a string of numbers from 00 to 19",
+    "MoTe1": "Modify Tests whileToFor - no longer uses a while loop",
+    "MoTe2": "Modify Tests whileToFor - it logs from 0 (inclusive) to 5 (exclusive) by 1",
+    "MoTe3": "Modify Tests continueGuardClause - uses a continue statement",
+    "MoTe4": "Modify Tests continueGuardClause - it logs from 1 (inclusive) to 5 (exclusive) by 1, skipping 2 and 3",
+    "FrScTe1": "From Scratch Tests loop0UpTo10 - it logs from 0 (inclusive) to 10 (exclusive) by 1",
+    "FrScTe2": "From Scratch Tests loop5to10 - it logs from 5 (inclusive) to 10 (inclusive) by 1",
+    "FrScTe3": "From Scratch Tests loopEvenNumbersUpTo10 - it logs from 0 (inclusive) to 10 (exclusive) by 2",
+    "FrScTe4": "From Scratch Tests loopEvenNumbersUpTo10 - does not rely on an if check or continue keyword",
+    "FrScTe5": "From Scratch Tests countdown5to0 - it logs from 5 (inclusive) to 0 (inclusive) by -1",
+    "FrScTe6": "From Scratch Tests loopUpToNum - it logs from 0 (inclusive) to the given number (exclusive) by 1",
+    "FrScTe7": "From Scratch Tests fizzbuzz - it logs fizz, buzz, fizzbuzz, or the number correctly"
+  },
+  "testNameToIdHash": {
+    "Debug Tests brokenLoop - it logs from the start number (inclusive) to the end number (inclusive) by 1": "DeTe1",
+    "Debug Tests brokenNested - it logs a string of numbers from 00 to 19": "DeTe2",
+    "Modify Tests whileToFor - no longer uses a while loop": "MoTe1",
+    "Modify Tests whileToFor - it logs from 0 (inclusive) to 5 (exclusive) by 1": "MoTe2",
+    "Modify Tests continueGuardClause - uses a continue statement": "MoTe3",
+    "Modify Tests continueGuardClause - it logs from 1 (inclusive) to 5 (exclusive) by 1, skipping 2 and 3": "MoTe4",
+    "From Scratch Tests loop0UpTo10 - it logs from 0 (inclusive) to 10 (exclusive) by 1": "FrScTe1",
+    "From Scratch Tests loop5to10 - it logs from 5 (inclusive) to 10 (inclusive) by 1": "FrScTe2",
+    "From Scratch Tests loopEvenNumbersUpTo10 - it logs from 0 (inclusive) to 10 (exclusive) by 2": "FrScTe3",
+    "From Scratch Tests loopEvenNumbersUpTo10 - does not rely on an if check or continue keyword": "FrScTe4",
+    "From Scratch Tests countdown5to0 - it logs from 5 (inclusive) to 0 (inclusive) by -1": "FrScTe5",
+    "From Scratch Tests loopUpToNum - it logs from 0 (inclusive) to the given number (exclusive) by 1": "FrScTe6",
+    "From Scratch Tests fizzbuzz - it logs fizz, buzz, fizzbuzz, or the number correctly": "FrScTe7"
+  },
+  "testScores": {
+    "Debug Tests": {
+      "DeTe1": 0,
+      "DeTe2": 0
+    },
+    "Modify Tests": {
+      "MoTe1": 0,
+      "MoTe2": 0,
+      "MoTe3": 0,
+      "MoTe4": 0
+    },
+    "From Scratch Tests": {
+      "FrScTe1": 0,
+      "FrScTe2": 0,
+      "FrScTe3": 0,
+      "FrScTe4": 0,
+      "FrScTe5": 0,
+      "FrScTe6": 0,
+      "FrScTe7": 0
+    }
+  },
+  "humanReadable": {
+    "Debug Tests": "0/2",
+    "finalTestScore": "FINAL SCORE: 0/13",
+    "Modify Tests": "0/4",
+    "From Scratch Tests": "0/7"
+  }
+}
