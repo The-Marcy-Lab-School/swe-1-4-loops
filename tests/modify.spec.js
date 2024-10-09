@@ -1,12 +1,12 @@
 const path = require('path');
 const ScoreCounter = require('score-tests'); // eslint-disable-line import/no-extraneous-dependencies
-const { whileToFor, continueGuardClause } = require('./modify');
+const { whileToFor, continueGuardClause } = require('../src/modify');
 
 const testSuiteName = 'Modify Tests';
 const scoresDir = path.join(__dirname, '..', 'scores');
 const scoreCounter = new ScoreCounter(testSuiteName, scoresDir);
 
-const log = jest.spyOn(console, 'log').mockImplementation(() => {});
+const log = jest.spyOn(console, 'log').mockImplementation(() => { });
 
 describe(testSuiteName, () => {
   afterEach(jest.clearAllMocks);

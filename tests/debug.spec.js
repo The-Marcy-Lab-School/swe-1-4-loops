@@ -1,6 +1,6 @@
 const path = require('path');
 const ScoreCounter = require('score-tests'); // eslint-disable-line import/no-extraneous-dependencies
-const { brokenLoop, brokenNested } = require('./debug');
+const { brokenLoop, brokenNested } = require('../src/debug');
 
 const testSuiteName = 'Debug Tests';
 const scoresDir = path.join(__dirname, '..', 'scores');
