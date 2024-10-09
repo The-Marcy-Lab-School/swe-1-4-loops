@@ -1,7 +1,6 @@
-# 1.1.0 - Loops
+# Loops
 
-- [1.1.0 - Loops](#110---loops)
-  - [Before you start](#before-you-start)
+- [Before you start](#before-you-start)
 - [Short Answers](#short-answers)
 - [Question 1: loop0UpTo10](#question-1-loop0upto10)
 - [Question 2: loop5to10](#question-2-loop5to10)
@@ -25,7 +24,7 @@ Also, READ THE TESTS CAREFULLY, the limits are exact! And if the prompt/descript
 
 So inclusive 1 to exclusive 5 is 1, 2, 3, 4, and exclusive 5 to inclusive 10 is 6, 7, 8, 9, 10.
 
-# Short Answers
+## Short Answers
 There are short answers for this assignment, please make sure you fill them out. Remember your answer should be formatted like so:
 
 ```plaintext
@@ -38,36 +37,36 @@ My answer written clearly, and just below the answer line. I won't touch the # f
 # Feedback
 ```
 
-# Question 1: loop0UpTo10
+## Question 1: loop0UpTo10
 Write a `for` loop that starts on 0, and logs each number up to, but not including, 10. Increment each number by 1.
 
-# Question 2: loop5to10
+## Question 2: loop5to10
 Write a `for` loop that starts on 5, and logs each number up to, and including, 10. Increment each number by 1.
 
-# Question 3: loopEventNumbersUpTo10
+## Question 3: loopEventNumbersUpTo10
 Write a `for` loop that starts on 0, and logs each *even* number up to, but not including, 10. What should you increment by?
 
 - 0 counts as an even number for this function
 - an `if` check with `continue` would *technically* work here, but it's overkill. Is there a simpler way to do this?
 
-# Question 4: countdown5to0
+## Question 4: countdown5to0
 Write a `for` loop that starts on 5, and logs each number down to, and including, 0. Decrement each number by 1.
 
-# Question 5: loopUpToNum
+## Question 5: loopUpToNum
 Write a `for` loop that starts on 0, and logs up to but, but not including, a given `num` argument. Increment each number by 1.
 
 Check the test for how this function should behave if given 0 or a negative number!
 
-# Question 6: MODIFY whileToFor
+## Question 6: MODIFY whileToFor
 Someone wrote at perfectly functional, but pretty clunky `while` loop. Can you keep the functionality exactly the same, but write it as a `for` loop?
 
-# Question 7: MODIFY continueGuardClause
+## Question 7: MODIFY continueGuardClause
 We've got some workable but clunky logic to avoid printing some numbers. In `continueGuardClause` can you maintain the exact same functionality, but do it with a `continue` statement in a guard clause?
 
-# Question 8: DEBUG brokenLoop
+## Question 8: DEBUG brokenLoop
 Inside `brokenLoop` it looks like we're trying to use a loop to compile a bunch of numbers into a string. However, the loop's condition and incrementor look wrong. Can read what the tests are expecting and fix this function?
 
-# Question 9: DEBUG brokenNested
+## Question 9: DEBUG brokenNested
 Ah, here's a real puzzler. Inside `brokenNested` we have a nested `for` loop situation that's trying to compile a string. However instead of returning:
 
 ```plaintext
@@ -81,7 +80,7 @@ It's returning:
 
 There's a problem with our child loop, can you fix it?
 
-# Question 10: fizzBuzz
+## Question 10: fizzBuzz
 Ok, for real this time! It's fizzbuzz! The function should run from 1 to 100 (inclusive of both). Here's what it should log with each loop:
 
 - If the number is divisible by 3, log "fizz"
@@ -89,7 +88,7 @@ Ok, for real this time! It's fizzbuzz! The function should run from 1 to 100 (in
 - If the number is divisible by 3 and 5, log "fizzbuzz"
 - If the number is not divisible by either, just log the number
 
-# Bonus: Add a while loop to the 1-0-3-lab
+## Bonus: Add a while loop to the 1-0-3-lab
 First off, if you haven't had a chance to start that lab, *that's* the bonus. That lab is the foundation to making a CLI app, and we'll build on it in this week's lab.
 
 However, it was incomplete! It mentioned at the very end how we could use a `while` loop to make it run longer. Well, now you know how to do that, so throw one in!
