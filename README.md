@@ -1,7 +1,6 @@
 # Loops
 
 - [Before you start](#before-you-start)
-- [Short Answers](#short-answers)
 - [Question 1: loop0UpTo10](#question-1-loop0upto10)
 - [Question 2: loop5to10](#question-2-loop5to10)
 - [Question 3: loopEventNumbersUpTo10](#question-3-loopeventnumbersupto10)
@@ -23,19 +22,6 @@ You will see a *lot* of similar loops on these problems. You may want to simply 
 Also, READ THE TESTS CAREFULLY, the limits are exact! And if the prompt/description is confusing, do what the *test* content says. Remember "inclusive" means "include the number" and "exclusive" means "NOT including the number"
 
 So inclusive 1 to exclusive 5 is 1, 2, 3, 4, and exclusive 5 to inclusive 10 is 6, 7, 8, 9, 10.
-
-## Short Answers
-There are short answers for this assignment, please make sure you fill them out. Remember your answer should be formatted like so:
-
-```plaintext
-# Question
-Some question about a piece of technology
-
-# Answer
-My answer written clearly, and just below the answer line. I won't touch the # feedback section, that's for my teacher
-
-# Feedback
-```
 
 ## Question 1: loop0UpTo10
 Write a `for` loop that starts on 0, and logs each number up to, but not including, 10. Increment each number by 1.
