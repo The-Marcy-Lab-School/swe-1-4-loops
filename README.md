@@ -11,7 +11,6 @@
 - [Question 8: DEBUG brokenLoop](#question-8-debug-brokenloop)
 - [Question 9: DEBUG brokenNested](#question-9-debug-brokennested)
 - [Question 10: fizzBuzz](#question-10-fizzbuzz)
-- [Bonus: Add a while loop to the 1-0-3-lab](#bonus-add-a-while-loop-to-the-1-0-3-lab)
 
 
 ## Before you start
@@ -73,13 +72,3 @@ Ok, for real this time! It's fizzbuzz! The function should run from 1 to 100 (in
 - If the number is divisible by 5, log "buzz"
 - If the number is divisible by 3 and 5, log "fizzbuzz"
 - If the number is not divisible by either, just log the number
-
-## Bonus: Add a while loop to the 1-0-3-lab
-First off, if you haven't had a chance to start that lab, *that's* the bonus. That lab is the foundation to making a CLI app, and we'll build on it in this week's lab.
-
-However, it was incomplete! It mentioned at the very end how we could use a `while` loop to make it run longer. Well, now you know how to do that, so throw one in!
-
-If you are done with that, our next lecture is going to be on Arrays. They're super cool, but a little different than our current data types. Try getting an early start by watching this video and reading this article.
-
-[W3 Schools - Interactive Array Article](https://www.w3schools.com/js/js_arrays.asp)
-[WebDevSimplified - JS Arrays Crash Course](https://www.youtube.com/watch?v=7W4pQQ20nJg)
