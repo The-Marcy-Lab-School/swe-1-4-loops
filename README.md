@@ -46,7 +46,7 @@ Check the test for how this function should behave if given 0 or a negative numb
 Someone wrote at perfectly functional, but pretty clunky `while` loop. Can you keep the functionality exactly the same, but write it as a `for` loop?
 
 ## Question 7: MODIFY continueGuardClause
-We've got some workable but clunky logic to avoid printing some numbers. In `continueGuardClause` can you maintain the exact same functionality, but do it with a `continue` statement in a guard clause?
+In `continueGuardClause` can fix the function so that it uses a `continue` statement in a guard clause to skip numbers `2` and `3`?
 
 ## Question 8: DEBUG brokenLoop
 Inside `brokenLoop` it looks like we're trying to use a loop to compile a bunch of numbers into a string. However, the loop's condition and incrementor look wrong. Can read what the tests are expecting and fix this function?
