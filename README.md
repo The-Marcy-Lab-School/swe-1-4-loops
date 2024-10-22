@@ -3,7 +3,7 @@
 - [Before you start](#before-you-start)
 - [Question 1: loop0UpTo10](#question-1-loop0upto10)
 - [Question 2: loop5to10](#question-2-loop5to10)
-- [Question 3: loopEventNumbersUpTo10](#question-3-loopeventnumbersupto10)
+- [Question 3: loopEvenNumbersUpTo10](#question-3-loopevennumbersupto10)
 - [Question 4: countdown5to0](#question-4-countdown5to0)
 - [Question 5: loopUpToNum](#question-5-loopuptonum)
 - [Question 6: MODIFY whileToFor](#question-6-modify-whiletofor)
@@ -28,7 +28,7 @@ Write a `for` loop that starts on 0, and logs each number up to, but not includi
 ## Question 2: loop5to10
 Write a `for` loop that starts on 5, and logs each number up to, and including, 10. Increment each number by 1.
 
-## Question 3: loopEventNumbersUpTo10
+## Question 3: loopEvenNumbersUpTo10
 Write a `for` loop that starts on 0, and logs each *even* number up to, but not including, 10. What should you increment by?
 
 - 0 counts as an even number for this function
