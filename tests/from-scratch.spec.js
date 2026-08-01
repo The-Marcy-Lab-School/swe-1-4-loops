@@ -1,5 +1,3 @@
-const path = require('path');
-const ScoreCounter = require('score-tests'); // eslint-disable-line import/no-extraneous-dependencies
 const {
   loop0UpTo10,
   loop5to10,
@@ -10,8 +8,6 @@ const {
 } = require('../src/from-scratch');
 
 const testSuiteName = 'From Scratch Tests';
-const scoresDir = path.join(__dirname, '..', 'scores');
-const scoreCounter = new ScoreCounter(testSuiteName, scoresDir);
 
 const log = jest.spyOn(console, 'log').mockImplementation(() => { });
 
@@ -31,8 +27,6 @@ describe(testSuiteName, () => {
     expect(log).toHaveBeenNthCalledWith(8, 7);
     expect(log).toHaveBeenNthCalledWith(9, 8);
     expect(log).toHaveBeenNthCalledWith(10, 9);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('loop5to10 - it logs from 5 (inclusive) to 10 (inclusive) by 1', () => {
@@ -44,8 +38,6 @@ describe(testSuiteName, () => {
     expect(log).toHaveBeenNthCalledWith(4, 8);
     expect(log).toHaveBeenNthCalledWith(5, 9);
     expect(log).toHaveBeenNthCalledWith(6, 10);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('loopEvenNumbersUpTo10 - it logs from 0 (inclusive) to 10 (exclusive) by 2', () => {
@@ -56,8 +48,6 @@ describe(testSuiteName, () => {
     expect(log).toHaveBeenNthCalledWith(3, 4);
     expect(log).toHaveBeenNthCalledWith(4, 6);
     expect(log).toHaveBeenNthCalledWith(5, 8);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('loopEvenNumbersUpTo10 - does not rely on an if check or continue keyword', () => {
@@ -72,8 +62,6 @@ describe(testSuiteName, () => {
     expect(log).toHaveBeenNthCalledWith(3, 4);
     expect(log).toHaveBeenNthCalledWith(4, 6);
     expect(log).toHaveBeenNthCalledWith(5, 8);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('countdown5to0 - it logs from 5 (inclusive) to 0 (inclusive) by -1', () => {
@@ -85,8 +73,6 @@ describe(testSuiteName, () => {
     expect(log).toHaveBeenNthCalledWith(4, 2);
     expect(log).toHaveBeenNthCalledWith(5, 1);
     expect(log).toHaveBeenNthCalledWith(6, 0);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('loopUpToNum - it logs from 0 (inclusive) to the given number (exclusive) by 1', () => {
@@ -113,8 +99,6 @@ describe(testSuiteName, () => {
     loopUpToNum(-1);
     expect(log).toHaveBeenCalledTimes(0);
     jest.clearAllMocks();
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('fizzbuzz - it logs fizz, buzz, fizzbuzz, or the number correctly', () => {
@@ -153,11 +137,5 @@ describe(testSuiteName, () => {
 
     expect(log).toHaveBeenNthCalledWith(40, 'buzz');
     expect(log).toHaveBeenNthCalledWith(50, 'buzz');
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
-
-  // IGNORE PLEASE
-  beforeEach(() => scoreCounter.add(expect));
-  afterAll(scoreCounter.export);
 });

@@ -1,10 +1,6 @@
-const path = require('path');
-const ScoreCounter = require('score-tests'); // eslint-disable-line import/no-extraneous-dependencies
 const { whileToFor, continueGuardClause } = require('../src/modify');
 
 const testSuiteName = 'Modify Tests';
-const scoresDir = path.join(__dirname, '..', 'scores');
-const scoreCounter = new ScoreCounter(testSuiteName, scoresDir);
 
 const log = jest.spyOn(console, 'log').mockImplementation(() => { });
 
@@ -15,8 +11,6 @@ describe(testSuiteName, () => {
     const textContent = whileToFor.toString();
     expect(textContent).not.toMatch(/while/);
     expect(textContent).toMatch(/for/);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('whileToFor - it logs from 0 (inclusive) to 5 (exclusive) by 1', () => {
@@ -32,15 +26,12 @@ describe(testSuiteName, () => {
     const textContent = whileToFor.toString(); // repeated code to avoid automatic pass
     expect(textContent).not.toMatch(/while/);
     expect(textContent).toMatch(/for/);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('continueGuardClause - uses a continue statement', () => {
     const textContent = continueGuardClause.toString();
 
     expect(textContent).toMatch(/continue/);
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
 
   it('continueGuardClause - it logs from 1 (inclusive) to 5 (exclusive) by 1, skipping 2 and 3', () => {
@@ -54,11 +45,5 @@ describe(testSuiteName, () => {
 
     const textContent = continueGuardClause.toString(); // repeated code to avoid automatic pass
     expect(textContent).toMatch(/continue/);
-
-    scoreCounter.correct(expect); // DO NOT TOUCH
   });
-
-  // IGNORE PLEASE
-  beforeEach(() => scoreCounter.add(expect));
-  afterAll(scoreCounter.export);
 });
