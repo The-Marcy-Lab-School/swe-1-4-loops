@@ -1,0 +1,59 @@
+{
+  "testScores": {
+    "Debug Tests": {
+      "DeTe1": 0,
+      "DeTe2": 0
+    },
+    "From Scratch Tests": {
+      "FrScTe1": 0,
+      "FrScTe2": 0,
+      "FrScTe3": 0,
+      "FrScTe4": 0,
+      "FrScTe5": 0,
+      "FrScTe6": 0,
+      "FrScTe7": 0
+    },
+    "Modify Tests": {
+      "MoTe1": 0,
+      "MoTe2": 0,
+      "MoTe3": 0,
+      "MoTe4": 0
+    }
+  },
+  "idToTestNameHash": {
+    "DeTe1": "Debug Tests broken_loop - builds a string from start (inclusive) to end (inclusive) by 1",
+    "DeTe2": "Debug Tests broken_nested - builds a string of numbers from 00 to 19",
+    "FrScTe1": "From Scratch Tests loop_0_up_to_10 - it prints from 0 (inclusive) to 10 (exclusive) by 1",
+    "FrScTe2": "From Scratch Tests loop_5_to_10 - it prints from 5 (inclusive) to 10 (inclusive) by 1",
+    "FrScTe3": "From Scratch Tests loop_even_numbers_up_to_10 - it prints from 0 (inclusive) to 10 (exclusive) by 2",
+    "FrScTe4": "From Scratch Tests loop_even_numbers_up_to_10 - does not rely on an if check or continue keyword",
+    "FrScTe5": "From Scratch Tests countdown_5_to_0 - it prints from 5 (inclusive) to 0 (inclusive) by -1",
+    "FrScTe6": "From Scratch Tests loop_up_to_num - it prints from 0 (inclusive) to the given number (exclusive) by 1",
+    "FrScTe7": "From Scratch Tests fizzbuzz - it prints fizz, buzz, fizzbuzz, or the number correctly",
+    "MoTe1": "Modify Tests while_to_for - no longer uses a while loop",
+    "MoTe2": "Modify Tests while_to_for - it prints from 0 (inclusive) to 5 (exclusive) by 1",
+    "MoTe3": "Modify Tests continue_guard_clause - uses a continue statement",
+    "MoTe4": "Modify Tests continue_guard_clause - it prints 1 to 5 (exclusive), skipping 2 and 3"
+  },
+  "testNameToIdHash": {
+    "Debug Tests broken_loop - builds a string from start (inclusive) to end (inclusive) by 1": "DeTe1",
+    "Debug Tests broken_nested - builds a string of numbers from 00 to 19": "DeTe2",
+    "From Scratch Tests loop_0_up_to_10 - it prints from 0 (inclusive) to 10 (exclusive) by 1": "FrScTe1",
+    "From Scratch Tests loop_5_to_10 - it prints from 5 (inclusive) to 10 (inclusive) by 1": "FrScTe2",
+    "From Scratch Tests loop_even_numbers_up_to_10 - it prints from 0 (inclusive) to 10 (exclusive) by 2": "FrScTe3",
+    "From Scratch Tests loop_even_numbers_up_to_10 - does not rely on an if check or continue keyword": "FrScTe4",
+    "From Scratch Tests countdown_5_to_0 - it prints from 5 (inclusive) to 0 (inclusive) by -1": "FrScTe5",
+    "From Scratch Tests loop_up_to_num - it prints from 0 (inclusive) to the given number (exclusive) by 1": "FrScTe6",
+    "From Scratch Tests fizzbuzz - it prints fizz, buzz, fizzbuzz, or the number correctly": "FrScTe7",
+    "Modify Tests while_to_for - no longer uses a while loop": "MoTe1",
+    "Modify Tests while_to_for - it prints from 0 (inclusive) to 5 (exclusive) by 1": "MoTe2",
+    "Modify Tests continue_guard_clause - uses a continue statement": "MoTe3",
+    "Modify Tests continue_guard_clause - it prints 1 to 5 (exclusive), skipping 2 and 3": "MoTe4"
+  },
+  "humanReadable": {
+    "Debug Tests": "0/2",
+    "From Scratch Tests": "0/7",
+    "Modify Tests": "0/4",
+    "finalTestScore": "FINAL SCORE: 0/13"
+  }
+}

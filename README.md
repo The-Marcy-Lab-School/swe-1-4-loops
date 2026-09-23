@@ -1,130 +1,198 @@
 # Loops
 
-- [Reminders](#reminders)
-  - [Asking ChatGPT for Help](#asking-chatgpt-for-help)
-  - [Be Okay With Being "Provisionally Complete"](#be-okay-with-being-provisionally-complete)
+Practice repeating work with `for` and `while`, and with `range()`.
+
+**Practicing:** for loops, while loops, `range()`, `continue`
+
+- [AI Use on This Assignment](#ai-use-on-this-assignment)
 - [Setup](#setup)
-- [Before you start](#before-you-start)
-- [From Scratch Questions](#from-scratch-questions)
-  - [Question 1: loop0UpTo10](#question-1-loop0upto10)
-  - [Question 2: loop5to10](#question-2-loop5to10)
-  - [Question 3: loopEvenNumbersUpTo10](#question-3-loopevennumbersupto10)
-  - [Question 4: countdown5to0](#question-4-countdown5to0)
-  - [Question 5: loopUpToNum](#question-5-loopuptonum)
-- [Modify Questions](#modify-questions)
-  - [Question 6: whileToFor](#question-6-whiletofor)
-  - [Question 7: continueGuardClause](#question-7-continueguardclause)
-- [Debug Questions](#debug-questions)
-  - [Question 8: brokenLoop](#question-8-brokenloop)
-  - [Question 9: brokenNested](#question-9-brokennested)
-- [Question 10: fizzBuzz](#question-10-fizzbuzz)
+- [Before You Start](#before-you-start)
+- [From Scratch](#from-scratch)
+  - [Question 1: `loop_0_up_to_10`](#question-1-loop_0_up_to_10)
+  - [Question 2: `loop_5_to_10`](#question-2-loop_5_to_10)
+  - [Question 3: `loop_even_numbers_up_to_10`](#question-3-loop_even_numbers_up_to_10)
+  - [Question 4: `countdown_5_to_0`](#question-4-countdown_5_to_0)
+  - [Question 5: `loop_up_to_num`](#question-5-loop_up_to_num)
+  - [Question 6: `fizzbuzz`](#question-6-fizzbuzz)
+- [Modify](#modify)
+  - [Question 7: `while_to_for`](#question-7-while_to_for)
+  - [Question 8: `continue_guard_clause`](#question-8-continue_guard_clause)
+- [Debug](#debug)
+  - [Question 9: `broken_loop`](#question-9-broken_loop)
+  - [Question 10: `broken_nested`](#question-10-broken_nested)
+- [Submitting](#submitting)
 
-## Reminders
+## AI Use on This Assignment
 
-### Asking ChatGPT for Help
+Use whichever mode matches where you are with this material. Both are fine,
+and most people move between them as a concept clicks.
 
-If you’re stuck, you may use ChatGPT to clarify the assignment — but not to solve it for you. To do this, copy the meta-prompt below into ChatGPT along with the assignment question.
+**Tutor mode.** The AI explains, questions, quizzes, and critiques, and you
+write every line you submit. For this assignment that means asking it what the
+three numbers in `range()` do, or having it quiz you until you can predict
+what your own loop will print. Ask it a hundred questions — that is the whole
+point. What you do not do is ask it for the function. Paste this at the start
+of a chat and it will hold for the rest of the conversation:
 
-> You are acting as a tutor. Your job is to explain what this coding question is asking, clarify confusing wording, and highlight the relevant concepts students need to know — but do not provide the full solution or code that directly answers the question. Instead, focus on rephrasing the problem in simpler terms, identifying what’s being tested, and suggesting what steps or thought processes might help. Ask guiding questions to ensure the student is thinking critically. Do not write the final function, algorithm, or code implementation.
+> You are acting as a tutor. Your job is to explain what this coding question
+> is asking, clarify confusing wording, and highlight the relevant concepts I
+> need to know — but do not provide the full solution or code that directly
+> answers the question. Instead, rephrase the problem in simpler terms,
+> identify what is being tested, and suggest what steps or thought processes
+> might help. Ask me guiding questions to make sure I am thinking critically.
+> Do not write the final function, algorithm, or code implementation.
 
-Be mindful of your AI usage on assignments. AI can be a great tool to help your learning but it can also be detrimental if you let it do too much of the thinking for you.
+**Implementer mode.** You write a specification first, the AI writes code from
+it, and then you verify that code line by line. For this assignment your spec
+must say, for every loop, where it starts, where it stops, and whether the
+last value is included. If what comes back does more than you asked for,
+reject it — over-delivery is a defect, and catching it is part of the job.
 
-### Be Okay With Being "Provisionally Complete"
-
-At Marcy, we will deem an assignment as "complete" if the solution passes at least **75%** of the automated tests. 
-
-However, we know many of you will feel the urge to hold off on submitting until your assignment feels 100% perfect. That drive for excellence is an asset!
-
-But perfectionism can also get in the way of learning — especially when we need to cover a lot in a short amount of time.
-
-That’s why we encourage you to be comfortable with being **“provisionally complete.”** This means:
-
-- Submitting your work even if it isn’t perfect yet
-- Treating submission as a checkpoint, not a finish line
-- Committing to return, revise, and improve later
-
-Learning to move forward with provisional completeness will help you make steady progress while still building the habit of continuous improvement.
+You own every line either way, and you will be asked to explain it.
 
 ## Setup
 
-For guidance on setting up and submitting this assignment, refer to the Marcy lab School Docs How-To guide for [Working with Short Response and Coding Assignments](https://marcylabschool.gitbook.io/marcy-lab-school-docs/how-tos/working-with-assignments#how-to-work-on-assignments).
-
-Here are some useful commands to remember.
+Work in `development/mod-1`. Make a draft branch before you start.
 
 ```sh
-npm i                   # install dependencies
-git checkout -b draft   # switch to the draft branch before starting
-
-npm test # run the automated tests
-npm run test:w # run the automated tests and rerun them each time you save a change
-
-git add -A              # add a changed file to the staging area
-git commit -m 'message' # create a commit with the changes
-git push                # push the new commit to the remote repo
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+git checkout -b draft
 ```
 
-## Before you start
-You will see a *lot* of similar loops on these problems. You may want to simply cut and copy code, and *ordinarily*, that's fine. But for this, we want to establish some muscle memory with `for` loops. So, for all the "from scratch" questions, please try to write each one out by hand.
+Run `pytest` for everything, or `pytest -k fizzbuzz` for one question. Scores
+land in `scores/scores.json`.
 
-`for` loops are used for a ton of algorithm challenges due to their dynamic nature. We want you to get so good at writing them it's literally boring.
+75% of tests passing counts as complete. Submit at that point even if it is
+not perfect. Treat submitting as a checkpoint rather than a finish line, and
+come back to improve it.
 
-Also, READ THE TESTS CAREFULLY, the limits are exact! And if the prompt/description is confusing, do what the *test* content says. Remember "inclusive" means "include the number" and "exclusive" means "NOT including the number"
+## Before You Start
 
-So inclusive 1 to exclusive 5 is 1, 2, 3, 4, and exclusive 5 to inclusive 10 is 6, 7, 8, 9, 10.
+Python has no C-style `for (let i = 0; i < 10; i++)` loop. You use `range()`
+instead, which takes up to three numbers:
 
-## From Scratch Questions
-
-### Question 1: loop0UpTo10
-Write a `for` loop that starts on 0, and logs each number up to, but not including, 10. Increment each number by 1.
-
-### Question 2: loop5to10
-Write a `for` loop that starts on 5, and logs each number up to, and including, 10. Increment each number by 1.
-
-### Question 3: loopEvenNumbersUpTo10
-Write a `for` loop that starts on 0, and logs each *even* number up to, but not including, 10. What should you increment by?
-
-- 0 counts as an even number for this function
-- an `if` check with `continue` would *technically* work here, but it's overkill. Is there a simpler way to do this?
-
-### Question 4: countdown5to0
-Write a `for` loop that starts on 5, and logs each number down to, and including, 0. Decrement each number by 1.
-
-### Question 5: loopUpToNum
-Write a `for` loop that starts on 0, and logs up to but, but not including, a given `num` argument. Increment each number by 1.
-
-Check the test for how this function should behave if given 0 or a negative number!
-
-## Modify Questions
-
-### Question 6: whileToFor
-Someone wrote at perfectly functional, but pretty clunky `while` loop. Can you keep the functionality exactly the same, but write it as a `for` loop?
-
-### Question 7: continueGuardClause
-In `continueGuardClause` can fix the function so that it uses a `continue` statement in a guard clause to skip numbers `2` and `3`?
-
-## Debug Questions
-
-### Question 8: brokenLoop
-Inside `brokenLoop` it looks like we're trying to use a loop to compile a bunch of numbers into a string. However, the loop's condition and incrementor look wrong. Can read what the tests are expecting and fix this function?
-
-### Question 9: brokenNested
-Ah, here's a real puzzler. Inside `brokenNested` we have a nested `for` loop situation that's trying to compile a string. However instead of returning:
-
-```plaintext
-"00-01-02-03-04-05-06-07-08-09-10-11-12-13-14-15-16-17-18-19"
-```
-It's returning:
-
-```plaintext
-"00-11-22-33-44-55-66-77-88-99-00-11-22-33-44-55-66-77-88-99"
+```python
+range(5)          # 0, 1, 2, 3, 4
+range(2, 5)       # 2, 3, 4
+range(0, 10, 2)   # 0, 2, 4, 6, 8
+range(5, 0, -1)   # 5, 4, 3, 2, 1
 ```
 
-There's a problem with our child loop, can you fix it?
+**The stop value is never included.** That catches everyone once. To finish on
+10, you stop at 11.
 
-## Question 10: fizzBuzz
-Ok, for real this time! It's fizzbuzz! The function should run from 1 to 100 (inclusive of both). Here's what it should log with each loop:
+Most of these questions **print** rather than return. The tests read what you
+printed, so a returned value will not count.
 
-- If the number is divisible by 3, log "fizz"
-- If the number is divisible by 5, log "buzz"
-- If the number is divisible by 3 and 5, log "fizzbuzz"
-- If the number is not divisible by either, just log the number
+## From Scratch
+
+Write your solutions in `src/from_scratch.py`.
+
+### Question 1: `loop_0_up_to_10`
+
+Print every number from 0 up to but not including 10.
+
+### Question 2: `loop_5_to_10`
+
+Print every number from 5 to 10, **including** 10.
+
+### Question 3: `loop_even_numbers_up_to_10`
+
+Print 0, 2, 4, 6, 8.
+
+You do **not** need an `if` check or a `continue`, and the tests confirm you
+did not use either. `range()` can count in twos on its own.
+
+### Question 4: `countdown_5_to_0`
+
+Print 5 down to 0, including 0.
+
+### Question 5: `loop_up_to_num`
+
+Print every number from 0 up to but not including `num`.
+
+```python
+loop_up_to_num(3)   # prints 0, 1, 2
+loop_up_to_num(0)   # prints nothing
+```
+
+### Question 6: `fizzbuzz`
+
+Print every number from 1 to 100, with three exceptions:
+
+- multiples of 3 print `"fizz"`
+- multiples of 5 print `"buzz"`
+- multiples of **both** print `"fizzbuzz"`
+
+```text
+1
+2
+fizz
+4
+buzz
+fizz
+...
+```
+
+Order matters here. If you check 3 before checking both, 15 never prints
+`"fizzbuzz"`. This question comes up in real interviews more than it has any
+right to.
+
+## Modify
+
+Change the two functions already in `src/modify.py`.
+
+### Question 7: `while_to_for`
+
+This prints 0 to 4 using a `while` loop and a counter it has to increment by
+hand. Rewrite it as a `for` loop with `range()`. The output stays the same,
+and the tests check the `while` is gone.
+
+### Question 8: `continue_guard_clause`
+
+This prints a message and a number for 1 through 4. Add a **guard clause** so
+that 2 and 3 are skipped entirely, printing nothing at all for them.
+
+Use `continue`, which abandons the current trip through the loop and starts
+the next one. The tests check you used it.
+
+## Debug
+
+### Question 9: `broken_loop`
+
+`broken_loop(start, end)` should build a string of every number from `start`
+to `end`, **including** `end`. It currently skips every other number and stops
+one short.
+
+```python
+broken_loop(1, 10)   # want "12345678910"
+broken_loop(0, 0)    # want "0"
+broken_loop(0, -1)   # want ""
+```
+
+Both problems are in the `range()` call. Note the last two cases: a range that
+covers one number, and a range that covers none.
+
+### Question 10: `broken_nested`
+
+`broken_nested` should build `"00-01-02-...-18-19"`, joining each outer number
+to each inner one. It returns doubled digits instead.
+
+```python
+broken_nested()   # want "00-01-02-03-04-05-06-07-08-09-10-11-...-19"
+```
+
+Look closely at the two loop variables. What happens to the outer one while
+the inner loop is running?
+
+## Submitting
+
+```sh
+git add -A
+git commit -m "your message"
+git push
+```
+
+Open a pull request to your instructor for feedback.
