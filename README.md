@@ -21,6 +21,7 @@ Practice repeating work with `for` and `while`, and with `range()`.
   - [Question 9: `broken_loop`](#question-9-broken_loop)
   - [Question 10: `broken_nested`](#question-10-broken_nested)
 - [Submitting](#submitting)
+- [Good luck!](#good-luck)
 
 ## AI Use on This Assignment
 
@@ -138,7 +139,7 @@ fizz
 
 Order matters here. If you check 3 before checking both, 15 never prints
 `"fizzbuzz"`. This question comes up in real interviews more than it has any
-right to.
+right to, so it's worth getting comfortable with. Don't overthink it!
 
 ## Modify
 
@@ -146,17 +147,19 @@ Change the two functions already in `src/modify.py`.
 
 ### Question 7: `while_to_for`
 
-This prints 0 to 4 using a `while` loop and a counter it has to increment by
-hand. Rewrite it as a `for` loop with `range()`. The output stays the same,
-and the tests check the `while` is gone.
+Rewrite `while_to_for` as a `for` loop with `range()`. It currently prints 0
+to 4 using a `while` loop and a counter it has to increment by hand. The
+output stays exactly the same, and the tests check the `while` is gone.
 
 ### Question 8: `continue_guard_clause`
 
-This prints a message and a number for 1 through 4. Add a **guard clause** so
-that 2 and 3 are skipped entirely, printing nothing at all for them.
+Add a guard clause to `continue_guard_clause` so that 2 and 3 are skipped
+entirely, printing nothing at all for them. It currently prints a message and
+a number for 1 through 4.
 
-Use `continue`, which abandons the current trip through the loop and starts
-the next one. The tests check you used it.
+A **guard clause** here is an `if` that runs `continue`. `continue` abandons
+the current trip through the loop and starts the next one, skipping the rest
+of the body. The tests check you used it.
 
 ## Debug
 
@@ -196,3 +199,8 @@ git push
 ```
 
 Open a pull request to your instructor for feedback.
+
+## Good luck!
+
+Off-by-one errors are a rite of passage. When a loop misbehaves, print the
+counter and watch what it actually does. You got this!
