@@ -71,8 +71,21 @@ come back to improve it.
 
 ## Before You Start
 
-Python has no C-style `for (let i = 0; i < 10; i++)` loop. You use `range()`
-instead, which takes up to three numbers:
+You will see a *lot* of similar loops in these problems. You may want to copy
+and paste, and *ordinarily* that is fine. Not here. We want you to build some
+muscle memory with `for` loops, so please write each "from scratch" question
+out by hand. Loops turn up in a huge number of algorithm challenges, and we
+want you to get so good at writing them it is literally boring.
+
+Also, READ THE TESTS CAREFULLY, the limits are exact. If a description
+confuses you, do what the *test* says. Remember that **inclusive** means
+"include the number" and **exclusive** means "do NOT include the number". So
+inclusive 1 to exclusive 5 is 1, 2, 3, 4. Exclusive 5 to inclusive 10 is 6, 7,
+8, 9, 10.
+
+Python has no C-style `for (let i = 0; i < 10; i++)`. You use `range()`
+instead, which takes up to three numbers: where to start, where to stop, and
+what to count by.
 
 ```python
 range(5)          # 0, 1, 2, 3, 4
@@ -81,8 +94,8 @@ range(0, 10, 2)   # 0, 2, 4, 6, 8
 range(5, 0, -1)   # 5, 4, 3, 2, 1
 ```
 
-**The stop value is never included.** That catches everyone once. To finish on
-10, you stop at 11.
+**The stop value is never included**, which is `range()` being exclusive at
+the end. That catches everyone once. To finish on 10, you stop at 11.
 
 Most of these questions **print** rather than return. The tests read what you
 printed, so a returned value will not count.
@@ -93,35 +106,50 @@ Write your solutions in `src/from_scratch.py`.
 
 ### Question 1: `loop_0_up_to_10`
 
-Print every number from 0 up to but not including 10.
+Write a `for` loop that starts on 0 and prints each number up to, but not
+including, 10. Count up by 1.
 
 ### Question 2: `loop_5_to_10`
 
-Print every number from 5 to 10, **including** 10.
+Write a `for` loop that starts on 5 and prints each number up to, and
+including, 10. Count up by 1.
+
+Remember `range()` stops before its second number. So what do you pass to
+finish on 10?
 
 ### Question 3: `loop_even_numbers_up_to_10`
 
-Print 0, 2, 4, 6, 8.
+Write a `for` loop that starts on 0 and prints each *even* number up to, but
+not including, 10. What should you count by?
 
-You do **not** need an `if` check or a `continue`, and the tests confirm you
-did not use either. `range()` can count in twos on its own.
+- 0 counts as an even number here
+- an `if` check with `continue` would *technically* work, but it is overkill.
+  Is there a simpler way? The tests confirm you did not use either
 
 ### Question 4: `countdown_5_to_0`
 
-Print 5 down to 0, including 0.
+Write a `for` loop that starts on 5 and prints each number down to, and
+including, 0. Count down by 1.
+
+Counting down means all three numbers in `range()` change. Which one makes it
+go backwards?
 
 ### Question 5: `loop_up_to_num`
 
-Print every number from 0 up to but not including `num`.
+Write a `for` loop that starts on 0 and prints each number up to, but not
+including, a given `num` argument. Count up by 1.
 
 ```python
 loop_up_to_num(3)   # prints 0, 1, 2
 loop_up_to_num(0)   # prints nothing
 ```
 
+Check the test for how this should behave when given 0 or a negative number.
+
 ### Question 6: `fizzbuzz`
 
-Print every number from 1 to 100, with three exceptions:
+Write a `for` loop that prints every number from 1 to 100, with three
+exceptions:
 
 - multiples of 3 print `"fizz"`
 - multiples of 5 print `"buzz"`
